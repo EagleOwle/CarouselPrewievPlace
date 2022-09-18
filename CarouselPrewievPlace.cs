@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CarouselPrewievPlace : MonoBehaviour
@@ -16,7 +15,12 @@ public class CarouselPrewievPlace : MonoBehaviour
 
     private void Start()
     {
-        pointCount = PrefabsStore.Instance.balls.Count;
+        Initialise(PrefabsStore.Instance.balls.Count);
+    }
+
+    public void Initialise(int pointCount)
+    {
+        this.pointCount = PrefabsStore.Instance.balls.Count;
         points = new PlacePoint[pointCount];
 
         for (int i = 0; i < pointCount; i++)
