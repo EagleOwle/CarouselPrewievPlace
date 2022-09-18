@@ -20,7 +20,7 @@ public class CarouselPrewievPlace : MonoBehaviour
 
     public void Initialise(int pointCount)
     {
-        this.pointCount = PrefabsStore.Instance.balls.Count;
+        this.pointCount = pointCount;
         points = new PlacePoint[pointCount];
 
         for (int i = 0; i < pointCount; i++)
